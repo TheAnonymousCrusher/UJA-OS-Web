@@ -104,3 +104,56 @@ entry.target.classList.remove("show");
 
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Function to update the visitor count
+        function updateVisitorCount() {
+            // Get the current count from local storage
+            let count = localStorage.getItem('visitorCount');
+            count = count ? parseInt(count) : 0; // Initialize if not present
+
+            // Increment the count
+            count++;
+
+            // Store the updated count back to local storage
+            localStorage.setItem('visitorCount', count);
+
+            // Update the displayed count
+            document.getElementById('visitor-count').innerText = count;
+        }
+
+        // Update the visitor count when the page loads
+        updateVisitorCount();

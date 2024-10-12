@@ -595,3 +595,49 @@
        transform: translate(0);
     }
  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .visit-container {
+    text-align: center;
+    background: #1E1E1E; /* Dark mode container */
+    padding: 30px;
+    border-radius: 20px; /* Curvy corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* max-width: 80vw; */
+    border: 5px solid #6a5acd; 
+    /* border: 5px solid #ff9d00;  */
+}
+
+h1 {
+    color: #ffffff; /* White text for dark mode */
+}
+
+.count {
+    /* font-size: 24px; */
+    margin-top: 20px;
+    color: #d3d3d3; /* Light grey for better visibility */
+}

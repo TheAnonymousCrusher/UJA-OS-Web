@@ -4,66 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - UJA-OS</title>
-    <link rel="icon" href="assets/favicon.png"/>
+    <title>Installation Guide for UJA-OS</title>
+    <link rel="icon" href="assets/favicon.png" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap" rel="stylesheet">
-
     <style>
         body {
-            background: radial-gradient(#000, #111);
-            color: white;
+            background-color: #111;
+            color: #fff;
             font-family: 'Lexend', sans-serif;
-        }
-
-        .container {
-            max-width: 90vw;
-            margin: 20px auto;
+            line-height: 1.6;
             padding: 20px;
-            text-align: center;
+            max-width: 1000px;
+            margin: auto;
         }
 
-        h1 {
+        h1,
+        h2 {
             color: #ff9d00;
-            margin-bottom: 30px;
-        }
-
-        .team-section {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
             margin: 20px 0;
         }
 
-        .team-member {
-            background-color: #292b34;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            flex: 1 1 300px;
-            max-width: 300px;
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
         }
 
-        .team-photo {
-            width: 100%;
-            border-radius: 25px;
-            margin-bottom: 15px;
-        }
-
-        h3 {
-            color: #ff9d00;
-            margin-bottom: 10px;
-            font-size: 1.8rem;
+        h2 {
+            font-size: 2rem;
         }
 
         p {
+            margin-bottom: 20px;
             color: #bbb;
         }
 
-        .email {
-            color: #00bfff; /* Light blue color for email */
-            font-weight: bold;
+        ul,
+        ol {
+            margin: 15px 0;
+            padding-left: 20px;
+            color: #ccc;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .warning-block {
+            background-color: rgb(212, 0, 0);
+            color: #333;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            text-align: center;
+            border: 2px solid white;
+            color: wheat;
+        }
+
+        hr {
+            border: 1px solid #ff9d00;
+            margin: 30px 0;
+        }
+
+        .container {
+            background-color: #292b34;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: #ff9d00;
+            padding: 10px 15px;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .download-btn:hover {
+            background-color: white;
+            transform: scale(1.05);
+        }
+
+        .theme-switcher {
+            margin: 20px 0;
+            text-align: center;
         }
 
         .back-arrow {
@@ -71,7 +103,7 @@
             top: 10px;
             left: 10px;
             font-size: 1.5rem;
-            color: white; 
+            color: white;
             font-weight: bold;
             display: inline-flex;
             align-items: center;
@@ -88,8 +120,101 @@
             color: orange;
             transform: translateX(-5px);
         }
-    </style>
 
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        #scrollToTopBtn:focus {
+            outline: none;
+        }
+
+        #scrollToTopBtn {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background: #ddd;
+            opacity: 0.7;
+            bottom: 30px;
+            right: 30px;
+            border-radius: 50%;
+            text-decoration: none;
+            text-align: center;
+            line-height: 45px;
+            cursor: pointer;
+            color: #111;
+            font-size: 25px;
+            z-index: 9999;
+            transition: 0.5s ease-in-out;
+        }
+
+        #scrollToTopBtn:hover,
+        #scrollToTopBtn:active {
+            background: #ff9d00;
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        #scrollToTopBtn:active {
+            transform: scale(0.9);
+        }
+
+        /* Mobile View */
+        @media (max-width: 600px) {
+            #scrollToTopBtn {
+                height: 30px;
+                width: 30px;
+                font-size: 20px;
+                line-height: 30px;
+                justify-content: center;
+                right: calc(50vw - 15px);
+                bottom: 30px;
+            }
+
+            #scrollToTopBtn i {
+                height: 100%;
+            }
+        }
+
+        img {
+            width: 90%;
+            margin: 4%;
+            border-radius: 20px;
+        }
+
+        li>a {
+            color: orange;
+        }
+
+        li>a:hover {
+            color: orangered;
+        }
+
+        /* Light Theme */
+        body.light-theme {
+            background-color: #f0f0f0;
+            color: #111;
+        }
+
+        body.light-theme .container {
+            background-color: #fff;
+            color: #111;
+        }
+
+        body.light-theme h1,
+        body.light-theme h2 {
+            color: #ff9d00;
+        }
+
+        body.light-theme .download-btn {
+            background-color: #007bff;
+            color: white;
+        }
+
+        body.light-theme .download-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
@@ -98,30 +223,130 @@
         <i class="fas fa-arrow-left"></i>
     </a>
 
-    <div class="container">
-        <h1>About Us</h1>
-        <p>Welcome to UJA-OS! Developed by two ambitious Grade 9 students, our operating system is designed to revolutionize the way schools utilize ICT devices and smart boards. With a focus on performance and user customization, UJA-OS enhances the educational experience for both students and teachers.</p>
-        
-        <div class="team-section">
-            <!-- First Team Member -->
-            <div class="team-member">
-                <img src="https://art.pixilart.com/sr2f2eafaa19c82.png" alt="Developer 1" class="team-photo">
-                <h3>Saajid Mohamed</h3>
-                <p>Age: 15</p>
-                <p>Creator of UJA-OS.<br>Customized the operating system.<br>Designed the website.</p>
-                Contact: <p class="email">saajid.mohamed.66@gmail.com</p>
-            </div>
-            
-            <!-- Second Team Member -->
-            <div class="team-member">
-                <img src="https://art.pixilart.com/sr2f2eafaa19c82.png" alt="Developer 2" class="team-photo">
-                <h3>Om Patel</h3>
-                <p>Age: 16</p>
-                <p>Optimized and conducted testing.<br>Done most beta-testing.</p>
-                <br>Contact: <p class="email">om11patel11@gmail.com</p>
-            </div>
-        </div>
+    <a id="scrollToTopBtn" href="#"><i class="fas fa-angle-up"></i></a>
+
+    <div class="theme-switcher">
+        <button id="darkTheme" class="download-btn">Dark Theme</button>
+        <button id="lightTheme" class="download-btn">Light Theme</button>
     </div>
 
+    <div class="container" id="top">
+        <div class="warning-block">
+            <strong>Warning:</strong> If you have an ICT device, this installation is already configured for you. This guide is intended for users who want to try UJA-OS on their personal devices. We do not recommend this for amateurs, as improper installation can lead to data loss or system issues.
+        </div>
+
+        <h1>Welcome to the UJA-OS Installation Guide</h1>
+        <p>Installing UJA-OS is the first step toward transforming your low-end devices into high-performance educational tools. Based on the reliable Fedora Linux, UJA-OS provides a seamless experience tailored for schools and institutions. Let's walk through the installation process together!</p>
+
+        <hr>
+
+        <h2>Why Choose UJA-OS?</h2>
+        <p>UJA-OS is designed specifically for educational environments. Our operating system optimizes performance for low-end hardware, ensuring smooth operation without compromising user experience. Here are some reasons to choose UJA-OS:</p>
+        <ul>
+            <li><strong>Optimized Performance:</strong> Built to run efficiently even on older hardware, making it ideal for schools.</li>
+            <li><strong>User-Friendly Interface:</strong> An intuitive desktop experience that’s easy to navigate for both students and teachers.</li>
+            <li><strong>Regular Updates:</strong> Continuous improvements and security enhancements to keep your system safe and up-to-date.</li>
+            <li><strong>Customizability:</strong> Tailor the environment to fit your needs with custom themes, icons, and settings.</li>
+        </ul>
+
+        <hr>
+
+        <h2>System Requirements</h2>
+        <p>Before you begin the installation, please ensure your hardware meets the following minimum requirements:</p>
+        <ul>
+            <li>1 GHz processor or faster</li>
+            <li>2 GB RAM (4 GB recommended for optimal performance)</li>
+            <li>15 GB of free disk space</li>
+            <li>Bootable USB or DVD drive</li>
+        </ul>
+        <p>Having these specifications will ensure a smooth installation and operational experience.</p>
+
+        <hr>
+
+        <h2>Step 1: Download UJA-OS</h2>
+        <p>Begin by downloading the latest version of UJA-OS from our official website. The ISO file will be your installation medium. Make sure to choose the version that suits your architecture (32-bit or 64-bit). Here's how to do it:</p>
+        <ol>
+            <li>Visit our official <a href="test.html" target="_blank">download</a> page.</li>
+            <li>Select the appropriate version of UJA-OS for your device.</li>
+            <li>Click the download button and wait for the file to finish downloading.</li>
+            <img src="assets/install-1.png">
+        </ol>
+
+        <hr>
+
+        <h2>Step 2: Create a Bootable USB or DVD</h2>
+        <p>Once the ISO file is downloaded, you need to create a bootable USB or DVD. Follow these steps:</p>
+        <ol>
+            <li>If using a USB drive, ensure it's at least 8 GB and formatted. You can use tools like <a href="https://www.rufus.ie/en/" target="_blank">Rufus</a> for Windows or <a href="https://www.etcher.io/" target="_blank">Etcher</a> for macOS and Linux.</li>
+            <li>Open the tool and select the downloaded UJA-OS ISO file.</li>
+            <li>Select your USB drive or DVD as the target device.</li>
+            <li>Click "Start" to create your bootable media.</li>
+        </ol>
+        <img src="assets/install-2.png">
+
+        <hr>
+
+        <h2>Step 3: Boot from USB or DVD</h2>
+        <p>Insert the bootable USB or DVD into your computer and restart. You may need to change your BIOS settings to boot from USB or DVD. Follow these steps:</p>
+        <ol>
+            <li>Restart your computer and enter the BIOS setup (usually by pressing <strong>F2</strong>, <strong>F10</strong>, or <strong>DEL</strong> key during startup).</li>
+            <li>Look for the boot menu and set your USB or DVD as the primary boot device.</li>
+            <li>Save changes and exit the BIOS setup.</li>
+            <li>Your computer should now boot into the UJA-OS installer.</li>
+        </ol>
+        <img src="assets/install-3.png">
+
+        <hr>
+
+        <h2>Step 4: Install UJA-OS</h2>
+        <p>Once the UJA-OS installer loads, follow the on-screen instructions:</p>
+        <ol>
+            <li>Select your preferred language and click "Continue."</li>
+            <li>Choose your installation type (clean installation or dual boot).</li>
+            <li>Allocate disk space for UJA-OS as required.</li>
+            <li>Click "Install" and wait for the process to complete.</li>
+            <li>Once done, restart your computer and remove the USB or DVD when prompted.</li>
+        </ol>
+        <img src="assets/install-4.png">
+
+        <hr>
+
+        <h2>Step 5: Post-Installation Setup</h2>
+        <p>After installation, you may want to set up your system preferences:</p>
+        <ol>
+            <li>Create a user account and set up a password.</li>
+            <li>Update the system by running the software updater.</li>
+            <li>Explore the application store to download essential software for your needs.</li>
+        </ol>
+
+        <div class="download-btn"><a href="https://ujasys.net" target="_blank">Download UJA-OS Now!</a></div>
+    </div>
+
+    <script>
+        document.getElementById("darkTheme").addEventListener("click", function () {
+            document.body.classList.remove("light-theme");
+        });
+
+        document.getElementById("lightTheme").addEventListener("click", function () {
+            document.body.classList.add("light-theme");
+        });
+
+        // Scroll to top button functionality
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.addEventListener("scroll", function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        });
+
+        scrollToTopBtn.addEventListener("click", function () {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        });
+    </script>
 </body>
+
 </html>
