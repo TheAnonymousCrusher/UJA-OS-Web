@@ -1,153 +1,38 @@
-# UJA-OS: Your Ultimate Solution for School ICT Devices and Smart Boards!
+# UJA-OS: A Simple, Efficient Operating System for Schools
 
-<style>
-  /* General styles */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+Welcome to the official repository of **UJA-OS**, an operating system designed to make technology in schools easier, faster, and more efficient. Our goal is to help both students and teachers improve their learning and teaching experience using low-end devices like smart boards and computers.
 
-  h1, h2, h3, h4, h5, h6 {
-    margin: 1em 0;
-    padding: 0;
-  }
+## Why UJA-OS?
 
-  p {
-    margin: 0.5em 0;
-  }
+- **Speed and Performance**: UJA-OS is built to run smoothly on older devices, so you don't have to worry about slow performance.
+- **Customizable**: Personalize your experience with custom logos, colors, themes, and wallpapers. Make your device look and feel the way you want.
+- **Pre-installed Apps**: Get started right away with apps like LibreOffice for writing, GIMP for creativity, and interactive whiteboard tools for the classroom.
+- **User-Friendly**: UJA-OS is easy to use, even if you're not familiar with technology. Its design is similar to Windows, making it simple for students and teachers to navigate.
+- **Constant Updates**: We provide regular updates to make sure your system stays secure and up-to-date with the latest features.
 
-  a {
-    color: #333;
-    text-decoration: none;
-  }
+## Features
 
-  a:hover {
-    text-decoration: underline;
-  }
+- **Easy Installation and Updates**: UJA-OS is simple to install and keeps itself updated with the latest tools and security fixes.
+- **Optimized for Education**: Designed specifically for the classroom, it comes with built-in apps that support both teaching and learning.
+- **Reliable Performance**: Even on devices with limited power, UJA-OS ensures a smooth, lag-free experience.
 
-  /* Header section */
-  #header {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-  }
+## Screenshots
 
-  #header h1 {
-    color: #333;
-    font-size: 2em;
-  }
+We’ve included screenshots so you can see how UJA-OS looks in action. (Click on images for a larger view).
 
-  /* Key features section */
-  #key-features {
-    margin: 2em 0;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
+## User Feedback
 
-  #key-features h2 {
-    text-align: center;
-    color: #333;
-  }
+Here are some things people are saying about UJA-OS:
+- “Fast and reliable, it transformed my teaching experience.”
+- “I thought my device was too old to be useful, but UJA-OS made it work like new.”
+- “Easy to use, even for someone who isn’t tech-savvy!”
 
-  #key-features ul {
-    list-style: none;
-    padding: 0;
-    margin: 1em 0;
-  }
+## Getting Started
 
-  #key-features li {
-    margin: 0.5em 0;
-  }
+Download UJA-OS now and bring your school's technology to the next level.
 
-  #key-features li:before {
-    content: "•";
-    margin-right: 10px;
-    color: #333;
-  }
+[**Download UJA-OS**](#)
 
-  /* Screenshots section */
-  #screenshots {
-    margin: 2em 0;
-    text-align: center;
-  }
+## Contributing
 
-  #screenshots img {
-    width: 250px;
-    margin: 10px;
-    border: 1px solid #ddd;
-    padding: 5px;
-  }
-
-  #screenshots img:hover {
-    opacity: 0.8;
-  }
-
-  /* Getting started section */
-  #getting-started {
-    margin: 2em 0;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-
-  #getting-started h2 {
-    text-align: center;
-    color: #333;
-  }
-
-  #getting-started p {
-    text-align: justify;
-  }
-
-  /* Contributing section */
-  #contributing {
-    margin: 2em 0;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-
-  #contributing h2 {
-    text-align: center;
-    color: #333;
-  }
-
-  #contributing p {
-    text-align: justify;
-  }
-
-  /* License section */
-  #license {
-    margin: 2em 0;
-    text-align: center;
-  }
-
-  #license a {
-    color: #333;
-  }
-
-  /* Contact section */
-  #contact {
-    margin: 2em 0;
-    text-align: center;
-  }
-
-  #contact a {
-    color: #333;
-  }
-</style>
-
-## UJA-OS: Your Ultimate Solution for School ICT Devices and Smart Boards!
-
-UJA-OS is a lightweight, user-friendly operating system specifically designed to breathe new life into low-end school ICT devices and smart boards. It empowers educators and students with a smooth, efficient, and engaging learning experience.
-
-**Key Features:**
-
-<div id="key-features">
-  <h2>Empowering Education</h2>
-  <ul>
-    <li>Enhanced Performance: Smooth and efficient operation even on limited resources.</li>
-    <li>Fully Customizable Experience: Create a unique environment that resonates with your school community.</li>
-    <li>Pre-Installed Applications: Essential tools like LibreOffice, GIMP, and interactive whiteboard applications for learning and creativity.</li>
+We welcome contributions! If you'd like to help improve UJA-OS, feel free to fork the repo and submit a pull request, or report issues you encounter.
