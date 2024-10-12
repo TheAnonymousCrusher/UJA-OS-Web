@@ -1,6 +1,6 @@
 # UJA-OS: A Simple, Efficient Operating System for Schools
 
-Welcome to the official repository of **UJA-OS**, an operating system designed to make technology in schools easier, faster, and more efficient. Our goal is to help both students and teachers improve their learning and teaching experience using low-end devices like smart boards and computers.
+Welcome to the official repository of **UJA-OS**'s website, an operating system designed to make technology in schools easier, faster, and more efficient. Our goal is to help both students and teachers improve their learning and teaching experience using low-end devices like smart boards and computers.
 
 ## Why UJA-OS?
 
@@ -29,7 +29,7 @@ Here are some things people are saying about UJA-OS:
 
 ## Getting Started
 
-Download UJA-OS now and bring your school's technology to the next level.
+Visit our website now UJA-OS and bring your school's technology to the next level.
 
 [**Download UJA-OS**](#)
 
