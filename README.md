@@ -1,5 +1,5 @@
 # UJA-OS: A Simple, Efficient Operating System for Schools
-
+## Overview
 Welcome to the official repository of **UJA-OS**'s website, an operating system designed to make technology in schools easier, faster, and more efficient. Our goal is to help both students and teachers improve their learning and teaching experience using low-end devices like smart boards and computers.
 
 ## Why UJA-OS?
@@ -31,8 +31,8 @@ Here are some things people are saying about UJA-OS:
 
 Visit our website now UJA-OS and bring your school's technology to the next level.
 
-[**Download UJA-OS**](#)
+[**Download UJA-OS**](https://theanonymouscrusher.github.io/UJA-OS-Web/)
 
 ## Contributing
 
-We welcome contributions! If you'd like to help improve UJA-OS, feel free to fork the repo and submit a pull request, or report issues you encounter.
+We welcome contributions! If you'd like to help improve UJA-OS, feel free to fork the repo and submit a pull request, or report any issues you encounter.
