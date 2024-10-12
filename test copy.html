@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      /* Global resets */
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Lexend', sans-serif;
+      user-select: none; /* Prevent text selection */
+      -webkit-user-select: none; /* For Safari */
+      -moz-user-select: none; /* For Firefox */
+      -ms-user-select: none; /* For Internet Explorer/Edge */
+      }
+      body, html {
+      /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+      background: radial-gradient(#1d1f27, #13151c);
+      color: white;
+      height: 80vh;
+      }
+      .container {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 20px;
+      text-align: center;
+      }
+      h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      }
+      h2 {
+        color: #00e676;
+      }
+      p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #bbb;
+      }
+      /* Centered content and OS Tab Styling */
+      .os-options, .version-options {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* Allows wrapping to the next line on smaller screens */
+      margin-bottom: 30px;
+      }
+      .os-tab, .version-tab {
+      background-color: #292b34;
+      padding: 15px 40px;
+      margin: 0 15px;
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .os-tab:hover, .version-tab:hover {
+      background-color: #3a3c45;
+      transform: translateY(-3px);
+      }
+      .os-tab.active, .version-tab.active {
+      background-color: #00bcd4;
+      color: white;
+      }
+      /* Download Options */
+      .download-options, .version-options {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      }
+      .download-options.active, .version-options.active {
+      display: block;
+      opacity: 1;
+      }
+      .download-btn {
+      display: inline-block;
+      background-color: #f9a825;
+      padding: 15px 40px;
+      margin: 10px;
+      font-size: 1.2rem;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .download-btn:hover {
+      background-color: #ffa000;
+      transform: translateY(-3px);
+      }
+      /* Back button */
+      .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 30px;
+      background-color: #292b34;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .back-btn:hover {
+      background-color: #3a3c45;
+      transform: translateY(-3px);
+      }
+      /* MOBILE */
+      /* Responsive Styles */
+      @media (min-width: 600px) {
+      .os-tab {
+      flex: 1 1 auto; /* Allow them to grow and shrink on larger screens */
+      max-width: none; /* Remove max width limit on larger screens */
+      }
+      }
+      .os-tab {
+      background-color: #292b34;
+      padding: 15px 40px;
+      margin: 10px; /* Updated margin for better spacing on smaller screens */
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      flex: 1 1 100%; /* Make tabs flexible and take full width on small screens */
+      max-width: 200px; /* Limit max width to keep tabs from getting too large */
+      }
+      .star {
+      transform-style: preserve-3d;
+      width: 1px;
+      height: 1px;
+      position: absolute;
+      color: red;
+      }
+      .star:before {
+      position: absolute;
+      /* Star */
+      content: ''; 
+      /* content: '\26AA'; Hollow Circle */
+      background: url('https://www.svgrepo.com/show/3081/star.svg') no-repeat center;
+      color: inherit;
+      inset: 0;
+      box-shadow: 0 0 1em .5em #a3c2;
+      filter: drop-shadow(0 0 .5em white);
+      text-shadow: 0 0 .8em #fff5;
+      }
+
+
+      .back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+    color: white; 
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Center the content inside the circle */
+    transition: color 0.3s, transform 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 50%; /* Makes the element a circle */
+    width: 50px; /* Set width for the circle */
+    height: 50px; /* Set height for the circle */
+}
+
+
+.back-arrow:hover {
+    color: orange; /* Changes to a teal color on hover */
+    transform: translateX(-5px); /* Subtle hover effect moving left */
+}
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <!-- <a href="javascript:void(0);" class="back-arrow" onclick="window.history.back();"> -->
+    <a href="index.html" class="back-arrow">
+
+      <i class="fas fa-arrow-left"></i>
+        <!-- <img src="assets/left-arrow.svg" height="50px"> -->
+    </a>
+    
+    <!-- <a href="index.html" class="back-arrow"><img src="assets/left-arrow.svg" height="50px"></a> -->
+
+
+    <div class="container">
+      <h1>Download UJA-OS</h1>
+      <p>Select your platform and version to download the latest or optimized version.</p>
+
+      <!-- OS Selection Tabs -->
+      <div id="os-selection" class="os-options">
+        <div class="os-tab" data-os="windows">Windows</div>
+        <div class="os-tab" data-os="mac">Mac</div>
+        <div class="os-tab" data-os="linux">Linux</div>
+      </div>
+
+      <!-- Version Selection Tabs (shown after OS selection) -->
+      <div id="version-selection" class="version-options">
+        <div class="version-tab" data-version="modern">Modern Version</div>
+        <br>
+        <div class="version-tab" data-version="optimized">Optimized Version</div>
+      </div>
+
+      <!-- Windows Download Options -->
+      <div id="windows-modern" class="download-options">
+        <h2>Download Modern Version for Windows</h2>
+        <br>
+        <a href="/path/to/windows-modern-installer.exe" class="download-btn">Installer (64-bit)</a>
+        <a href="/path/to/windows-modern-portable.zip" class="download-btn">Portable (64-bit)</a><br>
+        <div class="back-btn" onclick="showOSSelection()">Back to OS Selection</div>
+      </div>
+      <div id="windows-optimized" class="download-options">
+        <h2>Download Optimized Version for Windows</h2>
+        <br>
+        <a href="/path/to/windows-optimized-installer.exe" class="download-btn">Installer (64-bit)</a>
+        <a href="/path/to/windows-optimized-portable.zip" class="download-btn">Portable (64-bit)</a><br>
+        <div class="back-btn" onclick="showOSSelection()">Back to OS Selection</div>
+      </div>
+      <!-- Mac Download Options -->
+      <div id="mac-modern" class="download-options">
+        <h2>Download Modern Version for Mac</h2>
+        <br>
+        <a href="/path/to/mac-modern-installer.dmg" class="download-btn">Installer (Intel)</a>
+        <a href="/path/to/mac-modern-portable.zip" class="download-btn">Portable (Intel)</a><br>
+        <div class="back-btn" onclick="showOSSelection()">Back to OS Selection</div>
+      </div>
+      <div id="mac-optimized" class="download-options">
+        <h2>Download Optimized Version for Mac</h2>
+        <br>
+        <a href="/path/to/mac-optimized-installer.dmg" class="download-btn">Installer (Intel)</a>
+        <a href="/path/to/mac-optimized-portable.zip" class="download-btn">Portable (Intel)</a><br>
+        <div class="back-btn" onclick="showOSSelection()">Back to OS Selection</div>
+      </div>
+      <!-- Linux Download Options -->
+      <div id="linux-modern" class="download-options">
+        <h2>Download Modern Version for Linux</h2>
+        <br>
+        <a href="/path/to/linux-modern-deb.deb" class="download-btn">Debian/Ubuntu (.deb)</a>
+        <a href="/path/to/linux-modern-tar.gz" class="download-btn">Portable (.tar.gz)</a><br>
+        <div class="back-btn" onclick="showOSSelection()">Back to OS Selection</div>
+      </div>
+      <div id="linux-optimized" class="download-options">
+        <h2>Download Optimized Version for Linux</h2>
+        <br>
+        <a href="/path/to/linux-optimized-deb.deb" class="download-btn">Debian/Ubuntu (.deb)</a>
+        <a href="/path/to/linux-optimized-tar.gz" class="download-btn">Portable (.tar.gz)</a><br>
+        <div class="back-btn" onclick="showOSSelection()">Back to OS Selection</div>
+      </div>
+    </div>
+    <script>
+      const tabs = document.querySelectorAll('.os-tab');
+      const versionTabs = document.querySelectorAll('.version-tab');
+      const osSelection = document.getElementById('os-selection');
+      const versionSelection = document.getElementById('version-selection');
+      const downloadSections = document.querySelectorAll('.download-options');
+      
+      let selectedOS = '';
+      
+      // Handle OS selection
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          selectedOS = tab.getAttribute('data-os');
+          // Hide OS selection
+          osSelection.style.display = 'none';
+          // Show version selection
+          versionSelection.classList.add('active');
+        });
+      });
+      
+      // Handle version selection
+      versionTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const selectedVersion = tab.getAttribute('data-version');
+          // Hide version selection
+          versionSelection.classList.remove('active');
+          // Hide all download options
+          downloadSections.forEach(section => section.classList.remove('active'));
+          // Show the selected OS's download options for the selected version
+          document.getElementById(`${selectedOS}-${selectedVersion}`).classList.add('active');
+        });
+      });
+      
+      // Function to go back to OS selection
+      function showOSSelection() {
+        // Hide all download options
+        downloadSections.forEach(section => section.classList.remove('active'));
+        // Show OS selection
+        osSelection.style.display = 'flex';
+        versionSelection.classList.remove('active');
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      //look at fixes in the Pen https://codepen.io/ghaste/pen/OJqLbvg
+      //for adding mouse trail to a page that scrolls beyond the viewport, as would be the case with most websites - lol
+    //   let x1=0, y1=0;
+    //   window.client
+    //   const 
+    //   vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0),
+    //   dist_to_draw = 50,
+    //   delay = 1000,
+    //   fsize = [
+    //   '1.1rem', '1.4rem', '.8rem', '1.7rem'
+    //   ],
+    //   colors = [
+    //   '#E23636',
+    //   '#F9F3EE',
+    //   '#E1F8DC',
+    //   '#B8AFE6',
+    //   '#AEE1CD',
+    //   '#5EB0E5'
+    //   ],
+    //   rand = (min, max) => 
+    //   Math.floor(Math.random() * (max - min + 1)) + min,
+    //   selRand = (o) => o[rand(0, o.length -1)],
+    //   distanceTo =  (x1, y1, x2, y2) => 
+    //   Math.sqrt((Math.pow(x2-x1,2))+(Math.pow(y2-y1,2))),
+    //   shouldDraw = (x, y) => 
+    //   (distanceTo(x1, y1, x, y) >= dist_to_draw),
+    //   addStr = (x, y) => {
+    //   const str = document.createElement("div");
+    //   str.innerHTML = '&#10022;';
+    //   str.className = 'star';
+    //   str.style.top = `${y + rand(-20,20)}px`;
+    //   str.style.left = `${x}px`;
+    //   str.style.color = selRand(colors);
+    //   str.style.fontSize = selRand(fsize);
+    //   document.body.appendChild(str);
+    //   //console.log(rand(0, 3));
+    //   const fs = 5 + 5 * parseFloat(getComputedStyle(str).fontSize);
+    //   //console.log(vh, y, fs);
+    //   //console.log((y+fs)>vh?vh-y:fs);
+    //   str.animate({
+    //     translate: `0 ${(y+fs)>vh?vh-y:fs}px`,
+    //     opacity: 0,
+    //     transform: `rotateX(${rand(1, 500)}deg) rotateY(${rand(1, 500)}deg)`
+    //   }, {
+    //     duration: delay,
+    //     fill: 'forwards',
+      
+    //   });
+    //   //could add a animation terminate listener, but why add the additional load
+    //   setTimeout(() => {
+    //       str.remove();
+    //     }, delay);
+    //   }
+      
+    //   addEventListener("mousemove", (e) => {
+    //   const {clientX, clientY} = e;
+    //   if(shouldDraw(clientX, clientY)){
+    //   addStr(clientX, clientY);
+    //   x1 = clientX;
+    //   y1 = clientY;
+    //   }
+    //   });
+      
+      
+      
+    </script>
+  </body>
+</html>

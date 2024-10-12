@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to UJA-OS</title>
+    <link rel="icon" href="assets/favicon.png"/>
+    <link rel="stylesheet" href="landing.css">
+    <script src="main.js" defer></script>
+    <!-- <link rel="stylesheet" href="preloader.css"> -->
+    <!-- <script src="preloader.js"></script> -->
+    <!-- <link rel="stylesheet" href="navbar.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+
+<body>
+
+<!-- Preloader -->
+<!-- <div  class="preloader"> -->
+
+    <!-- <h1>LOADING...</h1> -->
+    <!-- <div class="yin-yang-loader"><img src="assets/favicon.png"></div> -->
+
+    <!-- <div class="glitch-wrapper">
+      <div class="glitch" data-glitch="LOADING">LOADING</div>
+    </div>
+
+  </div> -->
+
+
+
+
+
+
+    <div id="parallax">
+        <section id="top">
+            <!-- <div class="parallax" style="background-image: url(https://images.wallpaperscraft.com/image/single/black_dark_fractal_149686_3840x2160.jpg);"> -->
+            <div class="parallax" style="background-image: url(assets/main-bg.png);">
+
+                <h2>
+                <div class="glitch-wrapper">
+                    <div class="glitch" data-glitch="WELCOME TO UJA-OS">WELCOME TO UJA-OS</div>
+                </div>
+                </h2>
+
+                <!-- <h2>Welcome to UJA-OS</h2> -->
+                
+                <h3>Your ultimate solution for school ICT devices and smart boards!</h3>
+            </div>
+        </section>
+    </div> <!-- End of Parallax -->
+
+    <!-- Scroll to Top Button -->
+    <a id="scrollToTopBtn" href="#top"><i class="fas fa-angle-up"></i></a>
+
+
+    <div class="container">
+
+
+
+
+
+
+
+        <div id="os-selection" class="os-options">
+            <div onclick="redirectToInstall()" class="os-tab hidden" data-os="windows">[<i class="fas fa-download"></i>] INSTALLATION</div>
+            <div class="br-mobile-only">[SPACER]</div>
+            <div onclick="redirectToUpdate()" class="os-tab hidden" data-os="mac">[<i class="fas fa-upload"></i>] UPDATING</div>
+            <div class="br-mobile-only">[SPACER]</div>
+            <div onclick="redirectToAbout()" class="os-tab hidden" data-os="linux">[<i class="fas fa-info"></i>] ABOUT</div>
+
+            
+          </div>
+
+
+
+
+
+
+
+
+
+
+          <div class="feature-container">
+
+            <div class="feature-section hidden">
+                <h2 class="feature-title hidden"><i class="fas fa-book"></i> Transform Your Learning Experience</h2>
+                <p>Say goodbye to sluggish performance! UJA-OS is designed specifically for low-end devices, ensuring that your ICT Devices and smart boards run smoothly and efficiently.</p>
+            </div>
+        
+            <div class="feature-section hidden">
+                <h2 class="feature-title hidden"><i class="fas fa-brush"></i> Fully Customizable Experience</h2>
+                <p>Everything is fully customizable! Enjoy a vibrant environment tailored to your preferences with custom logos, color schemes, wallpapers, and themes that resonate with students and teachers alike. Make UJA-OS truly yours, unlike before!</p>
+            </div>
+        
+            <div class="feature-section hidden">
+                <h2 class="feature-title hidden"><i class="fas fa-laptop"></i> Pre-Installed Applications</h2>
+                <p>Enjoy a suite of pre-installed applications like LibreOffice for documentation, GIMP for creative projects, and interactive whiteboard tools to enhance classroom engagement.</p>
+            </div>
+        
+            <div class="feature-section hidden">
+                <h2 class="feature-title hidden"><i class="fas fa-memory"></i> Optimized Performance</h2>
+                <p>With cutting-edge performance optimization techniques, including ZRAM support, UJA-OS handles multitasking effortlessly, even on the most basic hardware.</p>
+            </div>
+        
+            <div class="feature-section hidden">
+                <h2 class="feature-title hidden"><i class="fas fa-user"></i> User-Friendly Interface</h2>
+                <p>The intuitive Windows-like desktop environment ensures that users of all ages can navigate easily, making it perfect for both students and teachers.</p>
+            </div>
+        
+            <div class="feature-section hidden">
+                <h2 class="feature-title hidden"><i class="fas fa-upload"></i> Regular Updates and Support</h2>
+                <p>Our dedicated team is constantly improving UJA-OS, offering regular updates and support to ensure your system is always up-to-date with the latest features and security enhancements.</p>
+            </div>
+        
+        </div>
+        
+
+
+
+        <div class="screenshot-container">
+            <h2 class="feature-title hidden" style="font-size: 35px;">Screenshots</h2>
+            <p class="hidden">(Click on images to view in larger size; click again to return)</p>
+            <div class="screenshot-section">
+                <!-- <img src="assets/screenshot-2.png" class="screenshot-image hidden" onclick="openLightbox(this)"> -->
+                <!-- <img src="assets/screenshot-3.png" class="screenshot-image hidden" onclick="openLightbox(this)"> -->
+                <!-- <img src="assets/screenshot-4.png" class="screenshot-image hidden" onclick="openLightbox(this)"> -->
+                <img src="https://via.placeholder.com/1600x900" class="screenshot-image hidden" onclick="openLightbox(this)">
+                <img src="https://via.placeholder.com/1600x900" class="screenshot-image hidden" onclick="openLightbox(this)">
+                <img src="https://via.placeholder.com/1600x900" class="screenshot-image hidden" onclick="openLightbox(this)">
+            
+                <img src="https://via.placeholder.com/1600x900" class="screenshot-image hidden" onclick="openLightbox(this)">
+                <img src="https://via.placeholder.com/1600x900" class="screenshot-image hidden" onclick="openLightbox(this)">
+                <img src="https://via.placeholder.com/1600x900" class="screenshot-image hidden" onclick="openLightbox(this)">
+
+            </div>
+        </div>
+        
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <!-- <span class="close" onclick="closeLightbox()">
+                <i class="fas fa-exit"></i>
+            </span> -->
+            <img class="lightbox-content" id="lightboxImage">
+        </div>
+        <!-- &times; -->
+        
+
+
+
+
+        <br>
+        <br>
+        <h2 class="feature-title hidden" style="font-size: 35px;"><i class="fas fa-comments"></i> What Users Are Saying</h2>
+
+        <!-- Testimony Section -->
+        <div class="testimony-container">
+
+
+
+
+            <!-- First Testimony -->
+            <div class="testimony hidden">
+                <p class="testimony-text">
+                    "UJA-OS has transformed my teaching experience! The system is fast, reliable, and incredibly easy to use. I no longer worry about my devices slowing down during lessons."
+                </p>
+                <br>
+                <div class="testimony-author">
+                    <img src="assets/feedback-1.png" alt="Mr. Dlamini Profile Picture">Mr. Dlamini
+                </div>
+                <p class="testimony-role">- CAT Teacher</p>
+            </div>
+        
+            <!-- Second Testimony -->
+            <div class="testimony hidden">
+                <p class="testimony-text">
+                    "My device was so slow, I couldn't even get anything done. UJA-OS has made my device usable again, and it doesn't feel like I'm working with an ancient piece of tech anymore."
+                </p>
+                <br>
+                <div class="testimony-author">
+                    <img src="assets/feedback-2.png" alt="Student Profile Picture">
+                    Some Guy
+                </div>
+                <p class="testimony-role">- Student</p>
+            </div>
+        
+            <!-- Third Testimony -->
+            <div class="testimony hidden">
+                <p class="testimony-text">
+                    "I'm not great with technology, but UJA-OS is very straightforward. Everything just works, and I feel more confident using my smart board now!"
+                </p>
+                <br>
+                <br>
+                <div class="testimony-author">
+                    <img src="assets/feedback-3.png" alt="Old Teacher Profile Picture">
+                    Old Teacher
+                </div>
+                <p class="testimony-role">- Veteran Teacher</p>
+            </div>
+        </div>
+
+        
+
+
+
+
+
+
+
+        <div class="long-content hidden">
+            <h2>Why Choose UJA-OS?</h2>
+            <div class="content" id="moreContent">
+                <p>UJA-OS not only enhances the performance of older hardware but also breathes new life into educational environments. With a focus on usability, students can focus on their studies without the distractions of a clunky interface or laggy performance.</p>
+                <p>Imagine a classroom where each device operates at peak performance, applications load instantly, and collaborative projects can be executed without the frustrating delays that typically accompany older systems.</p>
+                <p>UJA-OS is built on a robust Linux foundation, providing the reliability and security that schools demand. Our customizations ensure that it is not just functional but also engaging for students, helping to create a productive learning atmosphere.</p>
+                <p>Plus, with a plethora of educational tools at their fingertips, students can explore, learn, and create like never before. UJA-OS empowers the next generation of innovators and thinkers!</p>
+                <p>Join us in revolutionizing education with technology that truly understands the needs of both students and educators. Download UJA-OS today and take the first step toward a smarter, more efficient classroom!</p>
+
+                <a href="test.html" class="hidden">
+                    <button class="try-now">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                </a>
+                <br>
+                <br>
+
+            </div>
+            <button class="read-more" id="toggleButton">Read More</button>
+        </div>
+
+    </div>
+
+    <a href="test.html" class="download-btn"><i class="fas fa-download"></i> Download</a>
+
+
+
+
+
+
+ 
+
+
+</body>
+
+</html>
+

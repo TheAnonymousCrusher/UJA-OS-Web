@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation Guide for UJA-OS</title>
+    <link rel="icon" href="assets/favicon.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: 'Lexend', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            color: #ff9d00;
+            margin: 20px 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 20px;
+            color: #ccc;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .warning-block {
+            background-color: rgb(212, 0, 0);
+            color: #333;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            text-align: center;
+            border: 2px solid white;
+            color: wheat;
+        }
+
+        hr {
+            border: 1px solid #ff9d00;
+            margin: 30px 0;
+        }
+
+        .container {
+            background-color: #292b34;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: #ff9d00;
+            padding: 10px 15px;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .download-btn:hover {
+            background-color: white;
+            transform: scale(1.05);
+        }
+
+        .back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+    color: white; 
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Center the content inside the circle */
+    transition: color 0.3s, transform 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 50%; /* Makes the element a circle */
+    width: 50px; /* Set width for the circle */
+    height: 50px; /* Set height for the circle */
+}
+
+
+.back-arrow:hover {
+    color: orange; /* Changes to a teal color on hover */
+    transform: translateX(-5px); /* Subtle hover effect moving left */
+}
+
+::-webkit-scrollbar {
+    width: 0px; 
+} 
+
+#scrollToTopBtn:focus {
+    outline: none;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #ddd;
+    opacity: 0.7;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    color: #111;
+    font-size: 25px;
+    z-index: 9999;
+    transition: 0.5s ease-in-out;
+}
+  
+#scrollToTopBtn:hover,
+#scrollToTopBtn:active {
+    background: #ff9d00;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#scrollToTopBtn:active {
+    transform: scale(0.9);
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+    #scrollToTopBtn {
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+        line-height: 30px;
+        justify-content: center;
+        right: calc(50vw - 15px);
+        bottom: 30px;
+    }
+    #scrollToTopBtn i {
+        height: 100%;
+    }
+}
+
+img {
+    width: 90%;
+    margin: 4%;
+    border-radius: 20px;
+}
+
+li > a {
+    /* color: #007BFF; */
+    color: orange;
+}
+
+li > a:hover {
+    color: orangered;
+}
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="back-arrow">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <a id="scrollToTopBtn" href="#"><i class="fas fa-angle-up"></i></a>
+
+
+    <div class="container" id="top">
+        <div class="warning-block">
+            <strong>Warning:</strong> If you have an ICT device, this installation is already configured for you. This guide is intended for users who want to try UJA-OS on their personal devices. We do not recommend this for amateurs, as improper installation can lead to data loss or system issues.
+        </div>
+
+        <h1>Welcome to the UJA-OS Installation Guide</h1>
+        <p>Installing UJA-OS is the first step toward transforming your low-end devices into high-performance educational tools. Based on the reliable Fedora Linux, UJA-OS provides a seamless experience tailored for schools and institutions. Let's walk through the installation process together!</p>
+        
+        <hr>
+
+        <h2>Why Choose UJA-OS?</h2>
+        <p>UJA-OS is designed specifically for educational environments. Our operating system optimizes performance for low-end hardware, ensuring smooth operation without compromising user experience. Here are some reasons to choose UJA-OS:</p>
+        <ul>
+            <li><strong>Optimized Performance:</strong> Built to run efficiently even on older hardware, making it ideal for schools.</li>
+            <li><strong>User-Friendly Interface:</strong> An intuitive desktop experience that’s easy to navigate for both students and teachers.</li>
+            <li><strong>Regular Updates:</strong> Continuous improvements and security enhancements to keep your system safe and up-to-date.</li>
+            <li><strong>Customizability:</strong> Tailor the environment to fit your needs with custom themes, icons, and settings.</li>
+        </ul>
+        
+        <hr>
+
+        <h2>System Requirements</h2>
+        <p>Before you begin the installation, please ensure your hardware meets the following minimum requirements:</p>
+        <ul>
+            <li>1 GHz processor or faster</li>
+            <li>2 GB RAM (4 GB recommended for optimal performance)</li>
+            <li>15 GB of free disk space</li>
+            <li>Bootable USB or DVD drive</li>
+        </ul>
+        <p>Having these specifications will ensure a smooth installation and operational experience.</p>
+
+        <hr>
+
+        <h2>Step 1: Download UJA-OS</h2>
+        <p>Begin by downloading the latest version of UJA-OS from our official website. The ISO file will be your installation medium. Make sure to choose the version that suits your architecture (32-bit or 64-bit). Here's how to do it:</p>
+        <ol>
+            <li>Visit our official <a href="test.html" target="_blank">download</a> page.</li>
+            <li>Select the appropriate version of UJA-OS for your device.</li>
+            <li>Click the download button and wait for the file to finish downloading.</li>
+            <img src="assets/install-1.png">
+        </ol>
+        
+        <hr>
+
+        <h2>Step 2: Create a Bootable USB or DVD</h2>
+        <p>After downloading the ISO file, you’ll need to create a bootable USB or DVD. This process will allow your computer to boot from the UJA-OS installation medium. You can use tools like Rufus or Etcher for this task:</p>
+        <ol>
+            <li>Insert your USB drive or insert a blank DVD into your computer.</li>
+            <li>Open your preferred tool (e.g., Rufus or Etcher).</li>
+            <li>Select the UJA-OS ISO file you downloaded.</li>
+            <li>Follow the prompts to create the bootable medium. Make sure to select the correct device to avoid data loss.</li>
+
+            <img src="assets/install-2.jpg">
+        </ol>
+        <p>Once this process is complete, you’ll have a bootable medium ready for installation.</p>
+
+        <hr>
+
+        <h2>Step 3: Boot from the Installation Medium</h2>
+        <p>With your bootable USB or DVD ready, restart your computer and enter the BIOS/UEFI settings. You’ll need to change the boot priority to your USB or DVD drive. Follow these steps:</p>
+        <ol>
+            <li>Restart your computer.</li>
+            <li>As it boots, press the appropriate key (usually F2, F12, ESC, or DEL) to enter BIOS/UEFI settings.</li>
+            <li>Find the boot menu or boot priority settings.</li>
+            <li>Select your USB or DVD drive as the primary boot device.</li>
+            <li>Save your changes and exit the BIOS.</li>
+
+            <img src="assets/install-3.png">
+        </ol>
+
+        <hr>
+
+        <h2>Step 4: Installation Process</h2>
+        <p>Once your computer boots from the UJA-OS installation medium, you will see the welcome screen. Follow these steps to install UJA-OS:</p>
+        <ol>
+            <li>Select "Install UJA-OS" from the menu.</li>
+            <li>Choose your preferred language and click "Continue".</li>
+            <li>Set your time zone and keyboard layout, then click "Continue".</li>
+            <li>Partition your disk. If you're unsure, you can choose "Erase disk and install UJA-OS" for a clean installation. This will remove all existing data on the drive, so ensure you have backups if necessary.</li>
+            <li>Follow the prompts to set up your user account and password. Make sure to remember your credentials for future logins.</li>
+            <li>Click "Install Now" and wait for the installation process to complete. This may take some time, so be patient!</li>
+      
+            <img src="assets/install-4.jpg">
+            
+        </ol>
+
+        <hr>
+
+        <h2>Step 5: Finalizing the Installation</h2>
+        <p>After installation, the system will prompt you to remove the installation medium and reboot your computer. Here’s what to do next:</p>
+        <ol>
+            <li>Remove the USB drive or DVD from your computer.</li>
+            <li>Click "Reboot Now" to restart your system.</li>
+            <li>Upon restarting, you’ll be greeted with the UJA-OS welcome screen, ready for your first login!</li>
+       
+            <img src="assets/install-5.png">
+        </ol>
+
+        <hr>
+
+        <h2>Post-Installation Tips</h2>
+        <p>Congratulations on successfully installing UJA-OS! Here are some tips to enhance your experience:</p>
+        <ul>
+            <li><strong>Update Your System:</strong> Open the terminal and run <code>sudo dnf update</code> to ensure you have the latest packages and security patches.</li>
+            <li><strong>Explore Pre-Installed Applications:</strong> Familiarize yourself with applications like LibreOffice, GIMP, and educational tools included in UJA-OS to maximize productivity.</li>
+            <li><strong>Customize Your Environment:</strong> Access the settings menu to personalize your desktop environment, including themes, icons, and wallpapers.</li>
+            <li><strong>Backup Regularly:</strong> Use tools like Deja Dup to keep your data safe by creating regular backups.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Troubleshooting Common Issues</h2>
+        <p>If you encounter issues during installation or after booting, here are some common problems and solutions:</p>
+        <ul>
+            <li><strong>Installation Fails:</strong> Ensure your bootable medium is created correctly. Try recreating it if necessary.</li>
+            <li><strong>Can't Boot into UJA-OS:</strong> Check your BIOS settings to ensure the correct boot device is prioritized.</li>
+            <li><strong>Graphics Issues:</strong> If you experience display problems, you may need to install additional drivers after installation.</li>
+        </ul>
+        <p>For more specific issues, consult the UJA-OS community forums or our documentation for assistance.</p>
+
+        <hr>
+
+        <h2>Need Help?</h2>
+        <p>If you have questions or need support, feel free to visit us at school. We're here to help you make the most of your UJA-OS experience!</p>
+
+        <hr>
+
+        <h2>Join the UJA-OS Community</h2>
+        <p>Be part of our growing community of educators and tech enthusiasts. Share your experiences, tips, and tricks, and collaborate on projects that enhance learning with technology. Connect with us on social media and participate in discussions on our forum!</p>
+    </div>
+
+
+    <script>
+        document.getElementById("toggleButton").onclick = function() {
+            var content = document.getElementById("moreContent");
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block"; // Show the content
+                this.innerText = "Hide"; // Change button text
+            } else {
+                content.style.display = "none"; // Hide the content
+                this.innerText = "Read More"; // Reset button text
+            }
+        };
+    
+    </script>
+</body>
+
+</html>

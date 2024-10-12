@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+    <link rel="icon" href="assets/favicon.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lexend', sans-serif;
+        }
+        body, html {
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1d1f27;
+
+        }
+        .container {
+            text-align: center;            
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #00e676;
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+        .download-section {
+            background-color: #292b34;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            flex: 1; /* Allow sections to grow */
+            min-width: 200px; /* Minimum width for sections */
+            max-width: 90%;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #f9a825;
+            padding: 10px 20px;
+            margin: 10px 0;
+            font-size: 1rem;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #ffa000;
+        }
+        a{
+            text-decoration: none;
+        }
+        .back-btn {
+            margin-top: 20px;
+            background-color: #292b34;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #ffa000;
+            color: black;
+        }
+        /* Flexbox for side-by-side layout */
+        .flex-container {
+            display: flex;
+            justify-content: center; /* Center the boxes */
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Download UJA-OS Now</h1>
+        <br>
+        
+        <div class="flex-container">
+            <div class="download-section">
+                <h2>PC<br>Edition</h2>
+                <a href="assets/" class="download-btn">Download V.1.0 (.iso)</a>
+            </div>
+            <div class="download-section">
+                <h2>Board<br>Edition</h2>
+                <a href="assets/" class="download-btn">Download V1.0 (.iso)</a>
+            </div>
+        </div>
+<a href="index.html">
+        <div class="back-btn">Back to Home</div></a>
+    </div>
+</body>
+</html>

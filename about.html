@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - UJA-OS</title>
+    <link rel="icon" href="assets/favicon.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: radial-gradient(#000, #111);
+            color: white;
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .container {
+            max-width: 90vw;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff9d00;
+            margin-bottom: 30px;
+        }
+
+        .team-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .team-member {
+            background-color: #292b34;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            flex: 1 1 300px;
+            max-width: 300px;
+        }
+
+        .team-photo {
+            width: 100%;
+            border-radius: 25px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #ff9d00;
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+
+        p {
+            color: #bbb;
+        }
+
+        .email {
+            color: #00bfff; /* Light blue color for email */
+            font-weight: bold;
+        }
+
+        .back-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.5rem;
+            color: white; 
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.3s, transform 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+
+        .back-arrow:hover {
+            color: orange;
+            transform: translateX(-5px);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <a href="index.html" class="back-arrow">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <div class="container">
+        <h1>About Us</h1>
+        <p>Welcome to UJA-OS! Developed by two ambitious Grade 9 students, our operating system is designed to revolutionize the way schools utilize ICT devices and smart boards. With a focus on performance and user customization, UJA-OS enhances the educational experience for both students and teachers.</p>
+        
+        <div class="team-section">
+            <!-- First Team Member -->
+            <div class="team-member">
+                <img src="https://art.pixilart.com/sr2f2eafaa19c82.png" alt="Developer 1" class="team-photo">
+                <h3>Saajid Mohamed</h3>
+                <p>Age: 15</p>
+                <p>Creator of UJA-OS.<br>Customized the operating system.<br>Designed the website.</p>
+                Contact: <p class="email">saajid.mohamed.66@gmail.com</p>
+            </div>
+            
+            <!-- Second Team Member -->
+            <div class="team-member">
+                <img src="https://art.pixilart.com/sr2f2eafaa19c82.png" alt="Developer 2" class="team-photo">
+                <h3>Om Patel</h3>
+                <p>Age: 16</p>
+                <p>Optimized and conducted testing.<br>Done most beta-testing.</p>
+                <br>Contact: <p class="email">om11patel11@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
