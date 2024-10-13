@@ -187,13 +187,13 @@
      scale: 105%;
 }
  .long-content {
-     margin: 20px;
      padding: 20px;
      border: 3px solid #ccc;
-     border-radius: 8px;
+     border-radius: 12px;
      background-color: #222;
-     margin-left: 5vw;
-     margin-right: 5vw;
+     /* margin: 20px; */
+     /* margin-left: 5vw; */
+     /* margin-right: 5vw; */
      text-align: center;
 }
  .content {
@@ -255,7 +255,7 @@
     
     
         /* transform:skew(-10deg); */
-        transition: all 3s ease; 
+        transition: all 3s ease;  
         animation: glowAnimation .75s infinite alternate; /*  */
     }
 }
@@ -612,25 +612,30 @@
 
 
 
+.center-container {
+    display: grid;
+    place-items: center;
+}
 
 
-
-
-
-
-
-
-
- .visit-container {
+.visit-container {
     text-align: center;
-    background: #1E1E1E; /* Dark mode container */
+    /* background: #1E1E1E;  */
+    background: linear-gradient(45deg, #222, #111, #222);
     padding: 30px;
     border-radius: 20px; /* Curvy corners */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    /* max-width: 80vw; */
+    width: 30vw; 
     border: 5px solid #6a5acd; 
     /* border: 5px solid #ff9d00;  */
 }
+
+@media (max-width: 800px) {
+    .visit-container {
+        width: 80vw;
+    }
+}
+
 
 h1 {
     color: #ffffff; /* White text for dark mode */
